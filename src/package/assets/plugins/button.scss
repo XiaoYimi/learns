@@ -1,0 +1,56 @@
+$fontSize: 12px;
+
+$fontColor: #333;
+$white: #ffffff;
+$black: #000000;
+
+$red: #ff4a46;
+$orange: #ffb545;
+$yellow: #ffff59;
+$green: #00fd00;
+$cyan: #7cf3ff;
+$blue: #2d78f4;
+$voilet: #f181ff;
+
+
+@mixin btn-size($padding, $height, $fontSize) {
+  
+}
+
+@mixin btn-types($color, $bgColor) {
+    color: $color;
+    background-color: $bgColor;
+
+    &:hover { background-color: lighten($bgColor, 5%); }
+
+    &:active { background-color: darken($bgColor, 2%); }
+
+    &:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+}
+
+.do-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 0 8px;
+  height: 26px;
+  font-size: $fontSize;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+
+
+  &-red { @include btn-types($white, $red); }
+  &-orange { @include btn-types($white, $orange); }
+  &-yellow { @include btn-types($white, $yellow); }
+  &-green { @include btn-types($white, $green); }
+  &-cyan { @include btn-types($white, $cyan); }
+  &-blue { @include btn-types($white, $blue); }
+  &-voilet { @include btn-types($white, $voilet); }
+}

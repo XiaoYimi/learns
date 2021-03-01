@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "html-webpack-plugin": "^4.3.0",
-    "three": "^0.117.1",
+    "three": "^0.125.0",
     "vue": "^2.6.11",
     "vue-router": "^3.3.4"
   }
